@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo.jpeg">
+    <title>Gender Based violence Victim</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <style>
+        body {
+            background-image: url("images/1.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            }
+       footer {
+                background: rgb(7, 7, 7);
+                margin-left: -0px;
+                margin-right: -0px;
+                padding: 8px;
+                color: rgb(238, 238, 238);
+                display: flex;
+            }
+            
+            footer a {
+                color: white;
+            }
+            
+            footer #left-footer {
+                flex: 1;
+                border-right: 1px solid red;
+                padding-left: 32px;
+            }
+            
+            footer #left-footer ul {
+                padding: 0;
+                list-style: none;
+                line-height: 1.5;
+            }
+            
+            footer #right-footer {
+                flex: 2;
+                padding: 8px;
+                text-align: center;
+            }
+            
+            footer #social-media-footer a .fa-facebook,
+            footer #social-media-footer a .fa-youtube,
+            footer #social-media-footer a .fa-twitter,
+            footer #social-media-footer a .fa-github {
+                color: rgb(251, 253, 251);
+                transition: 0.4s;
+            }
+            
+            footer #social-media-footer ul {
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                padding: 0;
+            }
+            
+            footer #social-media-footer ul li {
+                font-size: 48px;
+                padding: 16px;
+                transition: 0.4s;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-youtube {
+                color: red;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-facebook {
+                color: #3b5998;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-twitter {
+                color: #bbb;
+            }
+            footer #social-media-footer ul li:hover a .fa-github {
+                color: #bbb;
+            }
+            /* Media Queries */
+            
+            @media (max-width: 900px) {
+                nav ul {
+                display: none;
+                }
+            
+                #menu-icon {
+                display: flex;
+                }
+            
+                #slideout-menu {
+                display: block;
+                }
+
+                #searchbox {
+                display: none;
+                }
+            
+                #blogpost{
+                width:100%;
+                border-left:0;
+                }
+            
+                #sidebar{
+                display: none;
+                }
+            }
+            
+            @media (max-width: 719px) {
+                main {
+                width: 95%;
+                }
+            
+                section {
+                flex-direction: column;
+                }
+            
+                .card,
+                .card .card-image img {
+                width: 100%;
+                }
+            
+                footer {
+                flex-direction: column;
+                text-align: center;
+                }
+            
+                footer #left-footer {
+                flex: 1;
+                border-right: 0;
+                padding-left: 0;
+                }
+            
+                footer #right-footer {
+                background: #eee;
+                color: black;
+                }
+            
+                footer #right-footer a {
+                color: black;
+                }
+            
+                footer #social-media-footer a .fa-facebook,
+                footer #social-media-footer a .fa-youtube,
+                footer #social-media-footer a .fa-github {
+                color: black;
+                transition: 0.4s;
+                }
+            }
+            
+            @media (max-width: 600px) {
+                main {
+                width: 100%;
+                }
+            
+                h1 {
+                font-size: 48px;
+                }
+            
+                #banner h2 {
+                font-size: 20px;
+                }
+            
+                .card {
+                text-align: center;
+                }
+            
+            }
+            
+            @media (min-width: 720px) {
+                main {
+                width: 95%;
+                }
+                .card {
+                width: 45%;
+                }
+                .card .card-image img {
+                width: 100%;
+                }
+            }
+            
+            @media (min-width: 1200px) {
+                main {
+                width: 85%;
+                }
+            }
+  
+/* Grid */
+/* *{
+  margin: 0;
+  box-sizing: border-box; 
+} */
+
+.column {
+  float: left;
+  width: 33.33%;
+  /* padding: 5px; */
+  /* margin-top: 500px;
+  margin-bottom: 0; */
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 400px;
+  height: 300px;
+  perspective: 10000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  transition: transform 1.0s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* .flip-box-front {
+  background-color: #bbb;
+  color: black;
+} */
+
+.flip-box-back {
+  background-color: rgb(85, 165, 105);
+  color: rgb(161, 70, 142);
+  transform: rotateY(180deg);
+}
+.logo img{
+      width: 60px;
+      height: 60px;
+}
+footer {
+                background: black;
+                margin-left: -0px;
+                margin-right: -0px;
+                padding: 8px;
+                color: rgb(238, 238, 238);
+                display: flex;
+            }
+            
+            footer a {
+                color: white;
+            }
+            
+            footer #left-footer {
+                flex: 1;
+                border-right: 1px solid red;
+                padding-left: 32px;
+            }
+            
+            footer #left-footer ul {
+                padding: 0;
+                list-style: none;
+                line-height: 1.5;
+            }
+            
+            footer #right-footer {
+                flex: 2;
+                padding: 8px;
+                text-align: center;
+            }
+            
+            footer #social-media-footer a .fa-facebook,
+            footer #social-media-footer a .fa-youtube,
+            footer #social-media-footer a .fa-twitter,
+            footer #social-media-footer a .fa-instagram {
+                color: white;
+                transition: 0.4s;
+            }
+            
+            footer #social-media-footer ul {
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                padding: 0;
+            }
+            
+            footer #social-media-footer ul li {
+                font-size: 48px;
+                padding: 16px;
+                transition: 0.4s;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-youtube {
+                color: red;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-facebook {
+                color: #3B5998;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-twitter {
+                color: #00ACEE;
+            }
+            footer #social-media-footer ul li:hover a .fa-instagram {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background-clip: text;
+                border-radius: 10px;
+            }
+            /* Media Queries */
+            
+            @media (max-width: 900px) {
+                nav ul {
+                display: none;
+                }
+            
+                #menu-icon {
+                display: flex;
+                }
+            
+                #slideout-menu {
+                display: block;
+                }
+
+                #searchbox {
+                display: none;
+                }
+            
+                #blogpost{
+                width:100%;
+                border-left:0;
+                }
+            
+                #sidebar{
+                display: none;
+                }
+            }
+            
+            @media (max-width: 719px) {
+                main {
+                width: 95%;
+                }
+            
+                section {
+                flex-direction: column;
+                }
+            
+                .card,
+                .card .card-image img {
+                width: 100%;
+                }
+            
+                footer {
+                flex-direction: column;
+                text-align: center;
+                }
+            
+                footer #left-footer {
+                flex: 1;
+                border-right: 0;
+                padding-left: 0;
+                }
+            
+                footer #right-footer {
+                background: #eee;
+                color: black;
+                }
+            
+                footer #right-footer a {
+                color: black;
+                }
+            
+                footer #right-footer p {
+                color: white;
+                }
+                footer #social-media-footer a .fa-facebook,
+                footer #social-media-footer a .fa-youtube,
+                footer #social-media-footer a .fa-twitter
+                footer #social-media-footer a .fa-instagram {
+                color: black;
+                transition: 0.4s;
+                }
+            }
+            
+            @media (max-width: 600px) {
+                main {
+                width: 100%;
+                }
+            
+                h1 {
+                font-size: 48px;
+                }
+            
+                #banner h2 {
+                font-size: 20px;
+                }
+            
+                .card {
+                text-align: center;
+                }
+            
+            }
+            
+            @media (min-width: 720px) {
+                main {
+                width: 95%;
+                }
+                .card {
+                width: 45%;
+                }
+                .card .card-image img {
+                width: 100%;
+                }
+            }
+            
+            @media (min-width: 1200px) {
+                main {
+                width: 85%;
+                }
+            }
+            .motto{
+                color: white;
+            }
+    </style>
+</head>
+    <body>
+        <div class="head">
+            <header>
+            <div><a href="about.html" class="logo"><img src="images/logo.jpeg" alt="logo"></a></div>
+                <ul class="navigation">
+                    <li><a class="active"href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </header>
+        </div>
+
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Are you a victim of gender based violence?</h2>
+            <hr />
+            <p>
+            There are many different definitions of GBV, but it can be broadly
+            defined as “the general term used to capture violence that occurs as a
+            result of the normative role expectations associated with each gender,
+            along with the unequal power relationships between genders, within the
+            context of a specific society.” The expectations associated with
+            different genders vary from society to society and over time.
+            Patriarchal power structures dominate in many societies, in which male
+            leadership is seen as the norm, and men hold the majority of power.
+            Patriarchy is a social and political system that treats men as
+            superior to women – where women cannot protect their bodies, meet
+            their basic needs, participate fully in society and men perpetrate
+            violence against women with impunity.
+            </p>
+            <a href="contact.html"class="btn">Report TO US</a>
+        </div><br/>
+        <br/>
+        <div class="flexgrid">
+            
+        
+            <div class="row">
+                <!-- <div class="column">
+                <img src="pexels-alex-green-5699782.jpg" alt="Snow" style="width:100%">
+                </div>
+                <div class="column">
+                <img src="pexels-cottonbro-6603353.jpg" alt="Forest" style="width:100%">
+                </div> -->
+                <div class="column">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <img  src="images/pexels-alex-green-5699782.jpg" alt="Mountains" style="width:200%">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <img  src="images/pexels-cottonbro-6603353.jpg" alt="Mountains" style="width:200%">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <img  src="images/pexels-karolina-grabowska-4506169.jpg" alt="Mountains" style="width:200%">
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <script type="teagan.js">
+        </script>
+    </section>
+    <footer>
+    <div id="left-footer">
+        <h4>&#169 2021 Development Software Students@UJ</h4><br/>
+        <em><b>contact:</b> 011 243 7563/ 083 620 5584 </em><br/><br/>
+        <em><ul><b>Address:</b> 11 Biccard
+            TSEBO</ul>
+           <ul>Block C</ul> 
+           <ul>85 Protea Road</ul> 
+           <ul>Kingsley office park</ul>
+           <ul>Chislehurston</ul>
+           <ul>Sandton</ul></em>
+           <br/>
+            <b>Email: </b>sililocom640@gmail.com
+    </div>
+
+    <div id="right-footer">
+        <h3>Follow us on</h3>
+        <div id="social-media-footer">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/Real-life-comming-soon-455037398231464">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/gbvunited?s=11">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/wbankgp?utm_medium=copy_link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p class="motto">It looks impossible until its done.Together We Can</p>
+    </div>
+</footer>
+</body>
+</html>
