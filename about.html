@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <title>Gender Based violence Victim</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.jpeg">
+    <style>
+       /* * {
+  box-sizing: border-box;
+} */
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-image: url(images/1.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: down;
+  width: 50%;
+  padding: 20px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+/* card description */
+.card-description{
+  background-image:url(images/4.jpg);
+  background-repeat:no-repeat;
+  background-size:cover; 
+  ;
+
+}
+main{
+    background-color:whitesmoke;
+}
+.logo img{
+      width: 60px;
+      height: 60px;
+}
+/* .page-heading{
+font-size:32px;
+font-family:'Roboto Condensed', sans-serif, black;
+border-left:3px solid black;
+border-right:3px solid black;
+transition: all 0.4s;
+display:inline-block;
+align-items: center;
+padding:4px 32px;
+margin-top: 100px;
+margin-right: 650px;
+} */
+.page-heading{
+            font-size:32px;
+            font-family:'Roboto Condensed', sans-serif;
+            border-left:3px solid black;
+            border-right:3px solid black;
+            transition: all 0.4s;
+            display:inline-block;
+            padding:4px 32px;
+            margin-top: 120px;
+            margin-right: 650px;
+            }
+
+            .page-heading:hover{
+            padding:4px 48px;
+            background: none;
+            }
+            .page-heading h2{
+              color:cornsilk; 
+            }
+footer {
+                background: black;
+                margin-left: -0px;
+                margin-right: -0px;
+                padding: 8px;
+                color: rgb(238, 238, 238);
+                display: flex;
+            }
+            
+            footer a {
+                color: white;
+            }
+            
+            footer #left-footer {
+                flex: 1;
+                border-right: 1px solid red;
+                padding-left: 32px;
+            }
+            
+            footer #left-footer ul {
+                padding: 0;
+                list-style: none;
+                line-height: 1.5;
+            }
+            
+            footer #right-footer {
+                flex: 2;
+                padding: 8px;
+                text-align: center;
+            }
+            
+            footer #social-media-footer a .fa-facebook,
+            footer #social-media-footer a .fa-youtube,
+            footer #social-media-footer a .fa-twitter,
+            footer #social-media-footer a .fa-instagram {
+                color: white;
+                transition: 0.4s;
+            }
+            
+            footer #social-media-footer ul {
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                padding: 0;
+            }
+            
+            footer #social-media-footer ul li {
+                font-size: 48px;
+                padding: 16px;
+                transition: 0.4s;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-youtube {
+                color: red;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-facebook {
+                color: #3B5998;
+            }
+            
+            footer #social-media-footer ul li:hover a .fa-twitter {
+                color: #00ACEE;
+            }
+            footer #social-media-footer ul li:hover a .fa-instagram {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background-clip: text;
+                border-radius: 10px;
+            }
+            /* Media Queries */
+            
+            @media (max-width: 900px) {
+                nav ul {
+                display: none;
+                }
+            
+                #menu-icon {
+                display: flex;
+                }
+            
+                #slideout-menu {
+                display: block;
+                }
+
+                #searchbox {
+                display: none;
+                }
+            
+                #blogpost{
+                width:100%;
+                border-left:0;
+                }
+            
+                #sidebar{
+                display: none;
+                }
+            }
+            
+            @media (max-width: 719px) {
+                main {
+                width: 95%;
+                }
+            
+                section {
+                flex-direction: column;
+                }
+            
+                .card,
+                .card .card-image img {
+                width: 100%;
+                }
+            
+                footer {
+                flex-direction: column;
+                text-align: center;
+                }
+            
+                footer #left-footer {
+                flex: 1;
+                border-right: 0;
+                padding-left: 0;
+                }
+            
+                footer #right-footer {
+                background: #eee;
+                color: black;
+                }
+            
+                footer #right-footer a {
+                color: black;
+                }
+            
+                footer #social-media-footer a .fa-facebook,
+                footer #social-media-footer a .fa-youtube,
+                footer #social-media-footer a .fa-twitter
+                footer #social-media-footer a .fa-instagram {
+                color: black;
+                transition: 0.4s;
+                }
+            }
+            
+            @media (max-width: 600px) {
+                main {
+                width: 100%;
+                }
+            
+                h1 {
+                font-size: 48px;
+                }
+            
+                #banner h3 {
+                font-size: 20px;
+                }
+            
+                .card {
+                text-align: center;
+                }
+            
+            }
+            
+            @media (min-width: 720px) {
+                main {
+                width: 95%;
+                }
+                .card {
+                width: 45%;
+                }
+                .card .card-image img {
+                width: 100%;
+                }
+            }
+            
+            @media (min-width: 1200px) {
+                main {
+                width: 85%;
+                }
+            }
+/* Its the one we were trying to style at school */
+            section{
+              margin-left: 300px;
+            
+            }
+
+        </style>
+</head>
+
+<body>
+    <div class="head">
+        <header>
+            <div><a href="news.html" class="logo"><img src="images/logo.jpeg" alt="logo"></a></div>
+            <ul class="navigation">
+                <li><a  href="index.html">Home</a></li>
+                <li><a class="active"href="about.html">About</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                
+            </ul>
+        </header>
+    </div>
+   <main>
+    <div class="card-description">
+      
+        <div style="text-align:center">
+
+          <h2 class="page-heading">About</h2><hr/>
+            <p>We help you solve your problem with <b>peace and serenity</b>,quickly. That means we <em>contact you</em> emmediately after you report to us. 
+                However we are expert in solving all the <em>Gender Based Violation </em>issues. 
+                This is where you meet the best lawyers and social workers you can trust. </p> 
+          </div>
+           <br/>
+           <br/><br/>
+           <section> 
+            <div id="post-container">
+            <section id="blogpost">
+            <div class="card">
+                <div class="card-image">
+                <img src="images/12.png" alt="Card Image">
+                </div>
+                <div class="card-description">
+                <h3>The Introduction</h3>
+                <hr/>
+                <p> A victim’s greatest fear is not being believed, too many people who have been victimised are too afraid to
+                   come forward because they believe nobody will listen to them or they want to be anonymous because they fear what might happen or be 
+                   said after. We create a safe space for people have been victimised, our goal is to encourage them to speak up and we promise that
+                    they will be heard so we can get perpetrators accountable, so they will not be able to hurt other people and justice is served.
+                     We promise to stand with everyone who report the crimes and offer services to help with counselling, where victims will be helped 
+                     emotionally with the trauma. We also offer a 24/7 days-a-week help centre for victims who would like assistance. We can never do
+                      enough to eradicate this huge problem our society faces; its time action is taken (<b>ENOUGH IS ENOUGH</b>).</p>
+                </div>
+            </div>
+        
+          </section>
+          <br/><br/>
+
+            <div style="text-align:center">
+                <h2>Meet Our Expert Team To Help Solve Your Problems</h2><br/><hr/>
+                <p>Our Management team</p>
+              </div>
+              
+              <br/>
+             <div class="row">
+               
+                <div class="column">
+                  <img src="images/docusign-BbSBf5uv50A-unsplash.jpg" alt="Teagan: Our Contact Manager " style="width:100%" onclick="myFunction(this);">
+                  
+                </div>
+                          
+                <div class="column">
+                  <img src="images/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Gerald: Our Organizer" style="width:100%" onclick="myFunction(this);">
+                </div>
+                              
+
+                <div class="column">
+                  <img src="images/steward-masweneng-IvaGYGAX3jI-unsplash.jpg" alt="motso: Our Lawyer" style="width:100%" onclick="myFunction(this);">
+                </div 
+                 
+                <div class="column">
+                  <img src="images/EKTe0lFWkAAr1Zf.jpg" alt="zozibini: Our social worker" style="width:100" onclick="myFunction(this);">
+                  
+                </div>
+                </div>
+              
+              <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style="width :100%">
+                <div id="imgtext"></div>
+              </div>
+              
+              <script>
+              function myFunction(imgs) {
+                var expandImg = document.getElementById("expandedImg");
+                var imgText = document.getElementById("imgtext");
+                expandImg.src = imgs.src;
+                imgText.innerHTML = imgs.alt;
+                expandImg.parentElement.style.display = "block";
+              }
+              </script>
+        </main>  
+        <footer>
+          <div id="left-footer">
+            <h4>&#169 2021 Development Software Students@UJ</h4><hr/>
+            <em><b>contact:</b> 011 243 7563/ 083 620 5584 </em><br/>
+            <em><ul><b>Address:</b>TEARS Foundation
+                TSEBO</ul>
+               <ul>Block C</ul> 
+               <ul>85 Protea Road</ul> 
+               <ul>Kingsley office park</ul>
+               <ul>Chislehurston</ul>
+               <ul>Sandton</ul></em>
+               <br/>
+               <b>Email: </b>sililocom640@gmail.com
+          </div>
+      
+          <div id="right-footer">
+              <h3>Follow us on</h3>
+              <div id="social-media-footer">
+                  <ul>
+                      <li>
+                          <a href="https://www.facebook.com/Real-life-comming-soon-455037398231464">
+                              <i class="fab fa-facebook"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <i class="fab fa-youtube"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="https://twitter.com/gbvunited?s=11">
+                              <i class="fab fa-twitter"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="https://instagram.com/wbankgp?utm_medium=copy_link">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <p></p>
+          </div>
+      </footer>
+
+</body>
+
+</html>
