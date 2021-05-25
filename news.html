@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gender Based violence Victim</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.jpeg">
+    <style>
+        body {
+            background-image: url("images/1.jpg");
+            background-repeat: no-repeat;
+            background-size:100%;
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            }
+
+            h1 {
+            padding: 8px;
+            border-radius: 8px;
+            margin: 0;
+            font-size: 80px;
+            color: rgb(255, 0, 0);
+            font-family: "Roboto Slab", serif;
+            }
+
+            p {
+            line-height: 1.5;
+            }
+
+            main {
+            margin: 0 auto;
+            }
+
+            .main {
+                margin-top: 50%;
+            }
+            a {
+            text-decoration: none;
+            color: black;
+            }
+
+            a:hover {
+            text-decoration: underline;
+            }
+
+            /* Inputs */
+
+            input,
+            textarea {
+            height: 32px;
+            padding: 0 16px;
+            font-family: "Roboto Condensed", sans-serif;
+            font-size: 20px;
+            border: none;
+            box-shadow: inset 8px 3px 18px -4px rgba(0, 0, 0, 0.4);
+            }
+
+            input:focus,
+            textarea:focus {
+            outline: none;
+            }
+
+            /* Banner */
+
+            #banner {
+            height: 120vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url("6.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-blend-mode: overlay;
+            color: white;
+            }
+
+            #banner h3 {
+            background: black;
+            border-radius: 8px;
+            padding: 0 24px;
+            font-size: 24px;
+            }
+
+            /* Search Box */
+
+            #searchbox {
+            position: fixed;
+            right: 0;
+            top: 24px;
+            width: 500px;
+            pointer-events: none;
+            z-index: 50;
+            transition: 0.4s;
+            }
+
+            #searchbox input {
+            height: 48px;
+            width: 100%;
+            }
+
+            /* Navigation */
+
+            nav {
+            height: 72px;
+            background: #202125;
+            width: 100%;
+            margin: 0;
+            position: fixed;
+            font-family: "Roboto Condensed", sans-serif;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 16px 0 0;
+            box-sizing: border-box;
+            z-index: 100;
+            }
+
+            nav a {
+            padding: 0 32px;
+            color: #eee;
+            transition: 0.4s;
+            }
+
+            nav a:hover {
+            text-decoration: none;
+            color: red;
+            }
+
+            nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            }
+
+            .active {
+            color: #f783ae;
+            }
+
+            #menu-icon {
+            height: 100%;
+            font-size: 28px;
+            padding: 0 4px;
+            color: #eee;
+            display: none;
+            align-items: center;
+            }
+
+            /* Search Icon */
+
+            #search-icon {
+            color: white;
+            padding: 0 32px;
+            cursor: pointer;
+            transition: 0.4s;
+            }
+
+            #search-icon:hover {
+            color: red;
+            }
+
+            /* Slideout Menu */
+
+            #slideout-menu {
+            display: none;
+            background: #2d3436;
+            z-index: 100;
+            position: fixed;
+            transition: 0.4s;
+            margin-top: 72px;
+            width: 100%;
+            text-align: center;
+            opacity:0;
+            pointer-events:none;
+            float: right;
+            }
+
+            #slideout-menu ul {
+            list-style: none;
+            padding: 0 32px;
+            }
+
+            #slideout-menu ul li {
+            padding: 8px;
+            }
+
+            #slideout-menu a {
+            font-family: "Roboto Condensed", sans-serif;
+            font-size: 20px;
+            color: white;
+            }
+
+            #slideout-menu input {
+            width: 85%;
+            padding: 8px;
+            font-family: "Roboto Condensed", sans-serif;
+            font-size: 20px;
+            text-align: center;
+            ;
+            }
+
+            /* Sections */
+
+            section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            }
+
+            .section-heading {
+            font-size: 32px;
+            font-family: "Roboto Condensed", sans-serif;
+            border-left: 3px solid black;
+            border-right: 3px solid black;
+            transition: all 0.4s;
+            display: inline-block;
+            padding: 4px 32px;
+            }
+
+            .section-heading:hover {
+            padding: 4px 48px;
+            background: red;
+            }
+
+            /* Section Source */
+
+            #section-source p {
+            padding: 8px;
+            text-align: center;
+            }
+
+            #section-source a {
+            margin: 8px;
+            text-align: center;
+            }
+
+            /* Card */
+
+            .card-image {
+            transition: 0.4s;
+            }
+
+            .card-image:hover {
+            box-shadow: 0 10px 6px -6px #777;
+            }
+
+            .card .card-description {
+            padding: 0 8px;
+            }
+
+            .card-meta-blogpost{
+            color:#333;
+            font-size:14px;
+            padding: 16px;
+            font-family:'Roboto Slab', serif;
+            }
+
+            .card-meta-blogpost a{
+            color:#333;
+            }
+
+            /* Button Read more */
+
+            .btn-readmore {
+            padding: 8px 24px;
+            border: 3px solid black;
+            transition: 0.4s;
+            display: inline-block;
+            margin-bottom: 24px;
+            margin-left: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            background: white;
+            }
+
+            .btn-readmore:hover {
+            background: red;
+            text-decoration: none;
+            padding: 8px 64px 8px 24px;
+            color: white;
+            }
+
+            /* Footer */
+
+            footer {
+            background: black;
+            margin-left: -120px;
+            margin-right: -120px;
+            padding: 8px;
+            color: #eee;
+            display: flex;
+            }
+
+            footer a {
+            color: white;
+            }
+
+            footer #left-footer {
+            flex: 1;
+            border-right: 1px solid red;
+            padding-left: 32px;
+            }
+
+            footer #left-footer ul {
+            padding: 0;
+            list-style: none;
+            line-height: 1.5;
+            }
+
+            footer #right-footer {
+            flex: 2;
+            padding: 8px;
+            text-align: center;
+            }
+
+            footer #social-media-footer a .fa-facebook,
+            footer #social-media-footer a .fa-youtube,
+            footer #social-media-footer a .fa-github {
+            color: white;
+            transition: 0.4s;
+            }
+
+            footer #social-media-footer ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding: 0;
+            }
+
+            footer #social-media-footer ul li {
+            font-size: 48px;
+            padding: 16px;
+            transition: 0.4s;
+            }
+
+            footer #social-media-footer ul li:hover a .fa-youtube {
+            color: red;
+            }
+
+            footer #social-media-footer ul li:hover a .fa-facebook {
+            color: #3b5998;
+            }
+
+            footer #social-media-footer ul li:hover a .fa-github {
+            color: #bbb;
+            }
+
+
+
+
+            .page-heading{
+            font-size:32px;
+            font-family:'Roboto Condensed', sans-serif;
+            border-left:3px solid black;
+            border-right:3px solid black;
+            transition: all 0.4s;
+            display:inline-block;
+            padding:4px 32px;
+            margin-top: 120px;
+            }
+
+            .page-heading:hover{
+            padding:4px 48px;
+            background: none;
+            }
+
+            .card-meta{
+            color:#333;
+            font-size: 14px;
+            padding-left:8px;
+            font-family:'Roboto Slab', serif;
+            }
+
+            .card-meta a{
+            color:#333;
+            }
+
+            /* Pagination */
+
+            .pagination{
+            padding:8px;
+            text-align:center;
+            font-weight:bold;
+            }
+
+            .pagination a{
+            border-top: 3px solid white;
+            display: inline-block;
+            padding:8px 16px;
+            transition:0.4s;
+            }
+
+            .pagination a:hover{
+            text-decoration: none;
+            border-top:3px solid black;
+            }
+
+            /* Single Blogpost */
+
+            #post-container{
+            display: flex;
+            }
+
+            #blogpost{
+            display: flex;
+            flex-direction:column;
+            width:70%;
+            border-left:1px solid #999;
+            }
+
+            #blogpost .card{
+            width:100%;
+            }
+
+            #blogpost .card-image:hover{
+            box-shadow: none;
+            }
+
+            /* Sidebar */
+
+            #sidebar{
+            background:#333;
+            flex:1;
+            padding: 8px 16px;
+            color:white;
+            box-shadow: inset 27px 0 51px -18px rgba(0,0,0,0.75);
+            }
+
+            /* Comments section */
+
+            #comments-section{
+            border-top: 2px solid #eee;
+            padding:8px;
+            }
+
+
+            /* Media Queries */
+
+            @media (max-width: 900px) {
+            nav ul {
+                display: none;
+            }
+
+            #menu-icon {
+                display: flex;
+            }
+
+            #slideout-menu {
+                display: block;
+            }
+
+            #searchbox {
+                display: none;
+            }
+
+            #blogpost{
+                width:100%;
+                border-left:0;
+            }
+
+            #sidebar{
+                display: none;
+            }
+            }
+
+            @media (max-width: 719px) {
+            main {
+                width: 95%;
+            }
+
+            section {
+                flex-direction: column;
+            }
+
+            .card,
+            .card .card-image img {
+                width: 100%;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer #left-footer {
+                flex: 1;
+                border-right: 0;
+                padding-left: 0;
+            }
+
+            footer #right-footer {
+                background: #eee;
+                color: black;
+            }
+
+            footer #right-footer a {
+                color: black;
+            }
+
+            footer #social-media-footer a .fa-facebook,
+            footer #social-media-footer a .fa-youtube,
+            footer #social-media-footer a .fa-github {
+                color: black;
+                transition: 0.4s;
+            }
+            }
+
+            @media (max-width: 600px) {
+            main {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            #banner h3 {
+                font-size: 20px;
+            }
+
+            .card {
+                text-align: center;
+            }
+
+            #logo-img {
+                padding: 0;
+            }
+            }
+
+            @media (min-width: 720px) {
+            main {
+                width: 95%;
+            }
+            .card {
+                width: 45%;
+            }
+            .card .card-image img {
+                width: 100%;
+            }
+            }
+
+            @media (min-width: 1200px) {
+            main {
+                width: 85%;
+            }
+            }
+
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            }
+
+            /* Center website */
+            .main {
+                max-width: 1000px;
+                margin: auto;
+            }
+
+            .main h1 {
+                font-size: 50px;
+                word-break: break-all;
+                color: white;
+            }
+
+            .row {
+                margin: 8px -16px;
+            }
+
+            /* Add padding BETWEEN each column */
+            .row, .row > .column {
+                padding: 8px;
+            }
+
+            /* Create four equal columns that floats next to each other */
+            .column {
+                float: left;
+                width: 25%;
+            }
+
+            .headline {
+                width: 100%;
+                background-color: white;
+                padding: 10px;
+                border-radius: 5px;
+                float: right;
+            }
+
+            /* Clear floats after rows */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Content */
+            .content {
+               border: 3px solid rgb(119, 119, 119);
+               border-radius: 4px;
+                padding: 10px;
+                
+            }
+
+            .content a,img{
+                text-decoration: none;
+                border-radius: 4px;
+                color: black;
+                width: 100%;
+            }
+
+            /* Responsive layout - makes a two column-layout instead of four columns */
+            @media screen and (max-width: 900px) {
+                .column , .headline{
+                    width: 50%;
+                }
+            }
+
+            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+                .column ,.headline{
+                    width: 100%;
+                }
+            }
+
+            #headline{
+                color: white;
+            }
+            .logo img{
+                width: 60px;
+                height: 60px;
+            }
+            .page-heading{
+            font-size:32px;
+            font-family:'Roboto Condensed', sans-serif, black;
+            border-left:3px solid black;
+            border-right:3px solid black;
+            transition: all 0.4s;
+            display:inline-block;
+            align-items: center;
+            padding:4px 32px;
+            margin-top: 120px;
+            }
+            
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <header>
+            <div><a href="blog.html" class="logo"><img src="images/logo.jpeg" alt="logo"></a></div>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active"href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="main">
+        <div id="headline">
+            <h2 class="page-heading">News</h2>
+            <p>Please note that the following is outsourced to third party websites</p>
+        </div>
+
+    
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+        <div class="column">
+            <div class="content">
+                <a href="https://www.sabcnews.com/sabcnews/families-of-hammersdale-gbv-victims-cry-foul-over-sas-justice-system/">
+                    <img src="images/Hammersdale SABC_News_GBV.png" alt="Moun" >
+                    <h3>Families of Hammersdale GBV victims cry foul over SA’s justice system</h3>
+                    <p>8 April 2021, 6:30 PM
+                        Families of victims of gender-based violence at Hammersdale west of Durban, say that they believe that South African law does not protect the victims.</p>
+                </a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://www.sabcnews.com/sabcnews/centane-women-feel-not-enough-is-done-to-protect-them-from-gbv/">
+                    <img src="images/Centane SABC-News-GBV-R.png" alt="Nature" >
+                    <h3>Centane women feel not enough is done to protect them from GBV</h3>
+                    <p>3 April 2021, 7:20 PM
+                        Women in Centane in the Eastern Cape say not enough is being done to protect them from gender-based violence in the area.</p>
+                </a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://www.sabcnews.com/sabcnews/cele-concedes-police-need-to-be-trained-to-understand-seriousness-of-gender-based-violence/">
+                    <img src="images/Cele SABC-News-GBV-R.png" alt="Lights">
+                    <h3>Cele concedes police need to be trained to understand seriousness of gender-based violence</h3>
+                    <p>21 February 2021, 10:19 AM
+                        Police Minister Bheki Cele has conceded that some police officers need to be trained to fully understand the seriousness of gender-based violence.</p>
+                </a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://www.sabcnews.com/sabcnews/warning-graphic-content-keneilwe-pules-murderer-gets-two-life-sentences/">
+                    <img src="images/SABC-News-GBV-protests-Twitter-@Our_DA-1.png" alt="Mountains" >
+                    <h3>[WARNING: GRAPHIC CONTENT] Keneilwe Pule’s murderer gets two life sentences</h3>
+                    <p>9 February 2021, 9:20 PM
+                        Convicted murderer and rapist, Lungile Nxelelwa will serve a life sentence for his crimes. 33-year old Nxelelwa has been handed two life sentences for the gruesome rape and murder of his girlfriend, 27-year-old Keneilwe Pule, in Sebokeng in 2019.</p>
+                </a>
+            </div>
+        </div>
+        <!-- END GRID -->
+        </div>
+        <div class="headline">
+            <div class="column content a" >
+                <a href="https://www.news24.com/news24/southafrica/news/six-new-gender-based-violence-safe-houses-to-open-in-the-western-cape-20210318">
+                    <img src="images/pexels-martin-péchy-3059274.jpg" alt="Six new gbv safe houses" >
+                </a>
+            </div>
+            <h2>Six new gender-based violence safe houses to open in the Western Cape</h2>
+            <br> <hr> <br>
+            <p>The Western Cape Department of Social Development has announced that six new gender-based violence (GBV) safe houses will be opened in various districts to help victims of abuse.</p>
+            <p>Briefing the Western Cape legislature's standing committee on social development on Thursday, Social Development MEC Sharna Fernandez said six properties outside the Cape metro were selected as locations for the safe houses.</p>
+            <br>
+            <a href="https://www.news24.com/news24/southafrica/news/six-new-gender-based-violence-safe-houses-to-open-in-the-western-cape-20210318">Read more...</a> 
+        </div>     
+    </div>      
+    <!-- END MAIN -->
+</div>
+</body>
+
+</html>
