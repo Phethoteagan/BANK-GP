@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="style.css" />
     
     <style>
+        .nav ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: tomato;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+           
+
+        }
+        .nav ul li:hover::after{
+            width: 100%;
+           
+
+        }
+      
         body {
             background-image: url("images/1.jpg");
             background-repeat: no-repeat;
@@ -443,9 +460,10 @@ footer {
     </style>
 </head>
     <body>
-        <div class="head">
+         <div class="head">
             <header>
             <div><a href="about.html" class="logo"><img src="images/logo.jpeg" alt="logo"></a></div>
+            <div class="nav">
                 <ul class="navigation">
                     <li><a class="active"href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -453,6 +471,9 @@ footer {
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
+
+            </div>
+               
             </header>
         </div>
 
