@@ -17,6 +17,22 @@ body {
     font-family: "Roboto", sans-serif;
     margin: 0;
   }
+  .nav ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: tomato;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+           
+
+        }
+        .nav ul li:hover::after{
+            width: 100%;
+           
+
+        }
   
   h1 {
     padding: 8px;
@@ -830,20 +846,21 @@ button{
             }
 </style>
 <body>
-    <div class="head">
+  <div class="head">
         <header>
             <div><a href="contact.html" class="logo"><img src="images/logo.jpeg" alt="logo"></a></div>
-            <ul class="navigation">
+            <div class="nav">
+              <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a class="active"href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+              </ul>
+            </div>
+           
         </header>
-    </div>
-
-    
+    </div> 
   <nav>
     
 
