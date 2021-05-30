@@ -15,16 +15,14 @@
         .nav ul li::after{   
             content: '';
             width: 0%;
-             height: 2px;
+            height: 2px;
             background: #912A77;
             display: block;
             margin: auto;
             transition: 0.5s;  
-               
         }
         .nav ul li:hover::after{
             width: 100%;
-           
 
         }
             body {
@@ -38,7 +36,6 @@
                 font-size: 1em;
                 color: rgb(255, 255, 255);
                 background: rgb(82, 29, 68);
-                /*This keeps affecting the float right line 33 display: inline-block; */
                 padding: 7px 30px;
                 margin-top: 25px;
                 text-transform: uppercase;
@@ -53,8 +50,8 @@
             letter-spacing: 6px;
             }
 
-            button[type=admin]{
-                margin-right: 42%;
+            button[type=submit]{
+                margin-right: 30%;
             }
 
             .container input{
@@ -64,6 +61,7 @@
                 margin-left: 70px;
                 width: 350px;
             }
+
             .container{
                 border: 2px solid rgb(141, 141, 141);
                 border-radius: 8px;
@@ -270,20 +268,18 @@
     <section>
         <div class="head">
             <header>
-                <div><a href="contact.html" class="logo"><img src="images/logo.jpeg" alt="logo"></a></div>
+                <div><a href="admin.php" class="logo"><img src="images/logo.jpeg" alt="logo"></a></div>
                 <div class="nav">
-                  <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a class="active"href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                  </ul>
+                    <ul class="navigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a class="active"href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
-               
             </header>
         </div> 
-       
         
         <div id="banner">
             <div class="contact">
@@ -293,26 +289,13 @@
             <ul>
                 <div class="container">
                     <form action="contact.php" method="post" ><br><br>
-                        <label></label><input type="text"placeholder="fullNames" name="fullName"  size ="50"><br><br>
-                        <label></label><input type="text" placeholder="Age"name="age"><br><br>
-                        <label></label><input type="email" placeholder="Email_Address"name="email"><br><br>
-                        <label></label><input type="text"placeholder="Contact_num" name="contactnum"><br><br>
-                        <label></label><input type="text" placeholder="physical address"name="paddress"><br><br>
+                        <input type="text"placeholder="fullNames" name="fullName"  size ="50" required><br><br>
+                        <input type="text" placeholder="Age"name="age" required><br><br>
+                        <input type="email" placeholder="Email_Address"name="email" required><br><br>
+                        <input type="text"placeholder="Contact_num" name="contactnum" required><br><br>
+                        <input type="text" placeholder="physical address"name="paddress" required><br><br>
+                        <input type="message" placeholder="What would you like to Report?"name="comment" required><br><br>
                         <button type="submit" name="Submit">Submit</button> 
-                        <div>
-                            <button type="admin" name="admin" class="admin" function="myfunction()">
-                                <a href="admin.php" >Admin</a>
-                                <!-- <script>onclick()
-                                    function myFunction() {
-                                        document.getElementsByName("admin").;
-                                    }
-                                </script> href="admin.php">Admin</a> -->
-                                <!-- <script>myfunction(){;
-                                    window.location.href = "admin.php";
-                                } </script> -->
-                            </button><br>
-                        </div>
-
                     </form>
                 </div>
             </ul>
@@ -322,15 +305,13 @@
         <div id="left-footer">
             <h4>&#169 2021 Development Software Students@UJ</h4><br/>
             <em><b>contact:</b> 011 243 7563/ 083 620 5584 </em><br/><br/>
-            <em><ul><b>Address:</b> 11 Biccard
-                PHETHO</ul>
-               <ul>Block C</ul> 
-               <ul>85 Protea Road</ul> 
-               <ul>Kingsley office park</ul>
-               <ul>Chislehurston</ul>
-               <ul>Sandton</ul></em>
-               <br/>
-                <b>Email: </b>sililocom640@gmail.com
+            <em><ul><b>Address:</b>Block C</ul> 
+            <ul>85 Protea Road</ul> 
+            <ul>Kingsley office park</ul>
+            <ul>Chislehurston</ul>
+            <ul>Sandton</ul></em>
+            <br/>
+            <b>Email: </b>sililocom640@gmail.com
         </div>
     
         <div id="right-footer">
@@ -338,7 +319,7 @@
             <div id="social-media-footer">
                 <ul>
                     <li>
-                        <a href="https://www.facebook.com/Real-life-comming-soon-455037398231464">
+                        <a href="https://www.facebook.com/GBViolence">
                             <i class="fab fa-facebook"></i>
                         </a>
                     </li>

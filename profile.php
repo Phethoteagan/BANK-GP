@@ -315,24 +315,26 @@
                     <th>Email Address</th>
                     <th>Contact</th>
                     <th>Physical Address</th>
+                    <th>Comment</th>
                 </tr>
                 <?php
                 $conn = mysqli_connect("localhost", "root", "", "gbv");
                 if ($conn-> connect_error) {
                     die("Connection failed:". $conn-> connect_error);
                 }
-                $sql = "SELECT id,fullName, age, email, contactnum, paddress from contact";
+                $sql = "SELECT id,fullName, age, email, contactnum, paddress, comment from contact";
                 $result = $conn-> query($sql);
                 while ($row = $result-> fetch_assoc()) 
                 {
                 ?>
                     </tr>
-                    <td><?php echo $row["id"];?></td>
+                        <td><?php echo $row["id"];?></td>
                         <td><?php echo $row["fullName"];?></td>
                         <td><?php echo $row["age"];?></td>
                         <td><?php echo $row["email"];?></td>
                         <td><?php echo $row["contactnum"];?></td>
-                        <td><?php echo $row["paddress"];?><td>
+                        <td><?php echo $row["paddress"];?></td>
+                        <td><?php echo $row["comment"];?></td>
                         <td><a href="edit.php?id=<?php echo $row['id']; ?>"> Edit </a></td>
                         <td><a href="delete.php?id=<?php echo $row['id']; ?>"> Delete </a></td>
                     </tr>
@@ -342,62 +344,48 @@
                 ?>
             </table>
         </div>
-        <div id="btns">
-        <a href="logout.php">  
-            <button type="submit" name="switch">Switch User</button>  
-        </a>
-            <!-- <button type="submit" name="switch" onclick="location.href='index.php'">Switch User</button> -->
-            <!-- <script>
-            function myFunction() {
-            location.href= "index.php";
-            }
-            </script> -->
-        </div>
     </section>
     <footer>
-          <div id="left-footer">
-              <h4>&#169 2021 Development Software Students@UJ</h4><br/>
-              <em><b>contact:</b> 011 243 7563/ 083 620 5584 </em><br/><br/>
-              <em><ul><b>Address:</b> 11 Biccard
-                  PHETHO</ul>
-                 <ul>Block C</ul> 
-                 <ul>85 Protea Road</ul> 
-                 <ul>Kingsley office park</ul>
-                 <ul>Chislehurston</ul>
-                 <ul>Sandton</ul></em>
-                 <br/>
-                  <b>Email: </b>sililocom640@gmail.com
-          </div>
-      
-          <div id="right-footer">
-              <h3>Follow us on</h3>
-              <div id="social-media-footer">
-                  <ul>
-                      <li>
-                          <a href="https://www.facebook.com/Real-life-comming-soon-455037398231464">
-                              <i class="fab fa-facebook"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://youtube.com/channel/UCE3ND3jdBmxWU_3fleAaTWg">
-                              <i class="fab fa-youtube"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://twitter.com/gbvunited?s=11">
-                              <i class="fab fa-twitter"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://instagram.com/united_against_gbv?utm_medium=copy_link">
-                              <i class="fab fa-instagram"></i>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-              <p class="motto">It looks impossible until its done.Together We Can</p>
-          </div>
-      </footer>
+            <div id="left-footer">
+                <h4>&#169 2021 Development Software Students@UJ</h4><br/>
+                <em><b>contact:</b> 011 243 7563/ 083 620 5584 </em><br/><br/>
+                <em><ul><b>Address:</b>Block C</ul> 
+                    <ul>85 Protea Road</ul> 
+                    <ul>Kingsley office park</ul>
+                    <ul>Chislehurston</ul>
+                    <ul>Sandton</ul></em>
+                    <br/>
+                    <b>Email: </b>sililocom640@gmail.com
+            </div>
+        
+            <div id="right-footer">
+                <h3>Follow us on</h3>
+                <div id="social-media-footer">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/GBViolence">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/channel/UCE3ND3jdBmxWU_3fleAaTWg">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/gbvunited?s=11">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/united_against_gbv?utm_medium=copy_link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="motto">It looks impossible until its done.Together We Can</p>
+            </div>
+        </footer>
 </body>
-
 </html>

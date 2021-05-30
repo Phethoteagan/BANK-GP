@@ -9,34 +9,30 @@
     if(isset($_POST['Submit']))
     {
 
-        if(!empty($_POST['fullName']) && !empty($_POST['age']) && !empty ($_POST['email']) && !empty($_POST['contactnum'])&& !empty($_POST['paddress']))
+        if(!empty($_POST['fullName']) && !empty($_POST['age']) && !empty ($_POST['email']) && !empty($_POST['contactnum'])&& !empty($_POST['paddress'])&& !empty($_POST['comment']))
         {
             $fullName = $_POST['fullName'] ;
             $age = $_POST['age'] ;
             $email = $_POST['email'] ;
             $contactnum = $_POST['contactnum'] ;
             $paddress = $_POST['paddress'] ;
+            $comment = $_POST['comment'] ;
 
-            $query = "INSERT into contact(fullName, age, email, contactnum, paddress) values ('$fullName', '$age', '$email', '$contactnum','$paddress')";
+            $query = "INSERT into contact(fullName, age, email, contactnum, paddress, comment) values ('$fullName', '$age', '$email', '$contactnum','$paddress','$comment')";
             
             
             $run = mysqli_query($con, $query) ;
 
             if($run)
             {
-                echo "form submitted successfully";
+                echo '<script>alert("Thank you, your case was reported successfully.")</script>';
             }
             else{
-                echo "form not submitted";
+                echo '<script>alert("form not submitted")</script>';
             }
         }
-        else
-        {
-            echo "please fill in all fields";
-        }
-
     }
     else{
-        echo "failed to submit your form ";
+        echo '<script>alert("ERROR 404: failed to submit form.")</script>';
     }
 ?>

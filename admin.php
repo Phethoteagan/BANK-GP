@@ -25,12 +25,10 @@
             display: block;
             margin: auto;
             transition: 0.5s;
-           
 
         }
         .nav ul li:hover::after{
             width: 100%;
-           
 
         }
             body {
@@ -44,7 +42,6 @@
                 font-size: 1em;
                 color: rgb(255, 255, 255);
                 background: rgb(82, 29, 68);
-                /*This keeps affecting the float right line 33 display: inline-block; */
                 padding: 7px 30px;
                 margin-top: 25px;
                 text-transform: uppercase;
@@ -279,74 +276,71 @@
         <header>
             <div><a href="contact.html" class="logo"><img src="images/logo.jpeg" alt="logo"></a></div>
             <div class="nav">
-              <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a class="active"href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a class="active"href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
             </div>
-           
+
         </header>
     </div> 
-       
-        <div id="login">
-            <h2>Admin Login</h2>
-            <form action="" method="post">
-                <label>UserName :</label>
-                <input id="name" name="username" placeholder="username" type="text">
-                <label>Password :</label>
-                <input id="password" name="password" placeholder="**********" type="password"><br><br>
-                <input name="submit" type="submit" value=" Login ">
-                <span><?php echo $error; ?></span>
-            </form>
-        </div>
+    <div id="login">
+        <h2>Admin Login</h2>
+        <form action="" method="post">
+            <label>UserName :</label>
+            <input id="name" name="username" placeholder="username" type="text">
+            <label>Password :</label>
+            <input id="password" name="password" placeholder="**********" type="password"><br><br>
+            <input name="submit" type="submit" value=" Login ">
+            <span> <?php echo $error; ?> </span>
+        </form>
+    </div>
     </section>
     <footer>
-          <div id="left-footer">
-              <h4>&#169 2021 Development Software Students@UJ</h4><br/>
-              <em><b>contact:</b> 011 243 7563/ 083 620 5584 </em><br/><br/>
-              <em><ul><b>Address:</b> 11 Biccard
-                  PHETHO</ul>
-                 <ul>Block C</ul> 
-                 <ul>85 Protea Road</ul> 
-                 <ul>Kingsley office park</ul>
-                 <ul>Chislehurston</ul>
-                 <ul>Sandton</ul></em>
-                 <br/>
-                  <b>Email: </b>sililocom640@gmail.com
-          </div>
-      
-          <div id="right-footer">
-              <h3>Follow us on</h3>
-              <div id="social-media-footer">
-                  <ul>
-                      <li>
-                          <a href="https://www.facebook.com/Real-life-comming-soon-455037398231464">
-                              <i class="fab fa-facebook"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://youtube.com/channel/UCE3ND3jdBmxWU_3fleAaTWg">
-                              <i class="fab fa-youtube"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://twitter.com/gbvunited?s=11">
-                              <i class="fab fa-twitter"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://instagram.com/united_against_gbv?utm_medium=copy_link">
-                              <i class="fab fa-instagram"></i>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-              <p class="motto">It looks impossible until its done.Together We Can</p>
-          </div>
-      </footer>
+        <div id="left-footer">
+            <h4>&#169 2021 Development Software Students@UJ</h4><br/>
+            <em><b>contact:</b> 011 243 7563/ 083 620 5584 </em><br/><br/>
+            <em><ul><b>Address:</b>Block C</ul> 
+            <ul>85 Protea Road</ul> 
+            <ul>Kingsley office park</ul>
+            <ul>Chislehurston</ul>
+            <ul>Sandton</ul></em>
+            <br/>
+            <b>Email: </b>sililocom640@gmail.com
+        </div>
+    
+        <div id="right-footer">
+            <h3>Follow us on</h3>
+            <div id="social-media-footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/GBViolence">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/channel/UCE3ND3jdBmxWU_3fleAaTWg">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/gbvunited?s=11">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/united_against_gbv?utm_medium=copy_link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="motto">It looks impossible until its done.Together We Can</p>
+        </div>
+    </footer>
 </body>
 
 </html>
